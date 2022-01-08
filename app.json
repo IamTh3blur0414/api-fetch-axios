@@ -1,0 +1,19 @@
+{
+    "people" : [
+        {
+            "name" : "Dodi",
+            "age" : 23,
+            "school" : "IA SCHOOL"
+        },
+        {
+            "name" : "IamTh3blur14",
+            "age" : 1,
+            "school" : "Boot"
+        },
+        {
+            "name" : "Conchris",
+            "age" : 9,
+            "school" : "Battle"
+        }
+    ]
+}
