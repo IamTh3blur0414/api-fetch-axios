@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>JSON FILE</title>
+</head>
+<body>
+
+    <div class="app">
+        <ul class="list">
+
+        </ul>
+    </div>
+    
+    <script>
+
+        var output = '';
+        
+        const fetching = async ()=>{
+            
+            //fetching data using fetch API
+           // const data = await fetch('./app.json')
+            
+            //const res = await data.json()
+
+            //fetching data using axios
+            const axs = await axios.get('./app.json');
+            const dt = await axs.data
+            console.log(dt)
+            
+
+            for(let i = 0; i < dt.people.length ; i++){
+              output += '<li>' + dt.people[i].name + ' ' + dt.people[i].age 
+                  +' '
+                  + dt.people[i].school 
+                  + '</li>'; 
+            }
+            document.querySelector('.list').innerHTML = output;
+            //return res
+        }
+
+        fetching()
+
+
+
+    </script>
+</body>
+</html>
